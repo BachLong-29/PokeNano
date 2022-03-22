@@ -1,24 +1,33 @@
 import logo from './logo.svg';
+import Nav from './navigation/Nav';
+import Homepage from './pages/home/Home'
+import AboutPage from './pages/about/About'
+import Information from './Information/Information';
+import CollectionPage from './pages/collection/Collection'
+import PokemonPage from './pages/collection/pokemon/Pokemon';
+import Layout from './Layout/Layout';
+import Error from './error/Error'
+import { Routes, Route} from 'react-router-dom'
 import './App.css';
 
-function App() {
+function App() {     
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>    
+      <div className='main-content'>        
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='/about' element={<AboutPage/>} />
+          <Route path="/collection" element={<CollectionPage />}>
+            <Route index element={<Layout/>} />            
+            <Route path=':id' element={<PokemonPage/>}/>
+          </Route>
+          <Route path='/information' element={<Information/>}/>
+          <Route path='/:somestring' element={<Error/>}/>
+        </Routes>
+      </div>
+    </>
+    
   );
 }
 
