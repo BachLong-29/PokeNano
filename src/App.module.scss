@@ -1,0 +1,6 @@
+$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
+@mixin mobile() {
+    @media #{$res_320} {
+        @content;
+    }
+}

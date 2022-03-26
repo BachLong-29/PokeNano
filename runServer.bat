@@ -1,0 +1,1 @@
+npx json-server --watch data/pokedex.json --port 3001

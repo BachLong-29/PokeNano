@@ -1,0 +1,26 @@
+.greninja{  
+    width: 40%;
+    height: 100%;
+}
+.paraOneText{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    h1{
+        position: absolute;
+        top: 200px;
+        left: -150px;
+        padding: 20px;
+        font-size: 64px;
+        font-family: 'Hubballi', cursive;
+        transform: rotate(-90deg);
+    }
+    p{
+        position: absolute;
+        top: 150px;
+        left: 80px;
+        width: 80%;
+        font-size: 12px;
+        text-align: justify;
+    }
+}

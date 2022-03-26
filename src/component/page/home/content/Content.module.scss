@@ -1,0 +1,69 @@
+.content{
+    position: absolute;      
+    bottom: 30px;
+    left: 90px;
+    width: 80%;
+    color: antiquewhite; 
+    background: transparent;  
+    overflow: hidden; 
+    z-index: 9999999;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(30px);
+    .intro{
+        width: 60%;
+        margin-left: 40%;
+        margin-right: auto;
+        h1{
+            font-size: 48px;
+            font-family: 'Bowlby One SC', cursive;
+        }
+        p{
+            margin: 20px;
+        }
+        span{
+            padding: 15px 0 0 15px;
+        }
+        .readMore{  
+            display: flex;
+            justify-content: flex-start;
+            align-self: center;  
+            button{
+                height: 50px;
+                width: 50px;
+                padding: 5px;
+                border-radius: 25px;
+                font-size: 24px;
+                color: #fff;
+                background: transparent;
+                border: 2px solid #fff;
+                cursor: pointer;
+            }
+        }
+    }
+    .detailedContent{
+        display: flex;
+        margin-top: 50px;
+        .col{
+            padding: 10px;
+        }
+    }
+    &.active{
+        transition: 1s;  
+        animation: contentEffect 1s linear 1;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    @keyframes contentEffect {
+        0%{
+          height: 0px;
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        100%{    
+          height: auto;
+          transform: translateY(0px);
+          opacity: 1;
+        }
+    }
+}
