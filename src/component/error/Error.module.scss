@@ -1,0 +1,6 @@
+@use '../../scss/' as *;
+.frame{ 
+    @include flex(center, center, column);
+    height: 100vh;
+    
+}

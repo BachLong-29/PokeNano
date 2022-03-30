@@ -1,0 +1,33 @@
+@use "./scss/" as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+
+    @include tablet {
+        font-size: 80%;        
+    }
+
+    @include mobile {
+        font-size: 60%;
+    }
+}
+
+body{  
+    font-family: $font-Poppins;
+    color: $white;
+    background: $body-bg;
+    transition: 0s;
+    transition-delay: 0.5s;  
+    z-index: -12;
+}
